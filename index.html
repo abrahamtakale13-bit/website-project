@@ -24,10 +24,10 @@
 </header>
 
 <div class="container">
-    <h2>Waa'ee Koo (About Me)</h2>
+    <h2>Waa'ee Koo</h2>
     <p>Baga nagaan dhuftan! Ani Abraham Takale jedhama. Barataa koodii (programming) reefu jalqabe yoo ta'u, teeknooloojii haaraa baruu fi rakkoolee adda addaa furuun jaalladha.</p>
     
-    <h2>Dandeettiiwwan Koo (Skills)</h2>
+    <h2>Dandeettiiwwan Koo</h2>
     <ul class="skills">
         <li>HTML5</li>
         <li>CSS3</li>
@@ -45,6 +45,49 @@
 <footer>
     <p>&copy; 2024 Abraham Takale | Made with ❤️ on GitHub</p>
 </footer>
+    <script>
+  // 1. Username GitHub irraa fudhachuu
+  const username = "abrahamtakale13-bit";
 
+  // 2. Linkii Profile uumuu
+  const profileLink = https://github.com/${username};
+
+  // 3. Welcome Alert (Nagaa gaafachuu)
+  window.onload = () => {
+    alert("Baga nagaan dhufte! Ani " + username + " dha.");
+    
+    // 4. Console irratti odeeffannoo barreessu (Debugging)
+    console.log("Website Abraham banameera.");
+  };
+
+  // 5. Sa'aatii (Real-time Clock)
+  function updateTime() {
+    const now = new Date();
+    console.log("Yeroon amma: " + now.toLocaleTimeString());
+  }
+  setInterval(updateTime, 1000);
+
+  // 6. Click Tracker (Buna meeqa akka cuqaasan lakkaa'uu)
+  let count = 0;
+  document.body.onclick = () => {
+    count++;
+    // 7. Dynamic Title (Title website-ii jijjiiru)
+    document.title = Cuqaasa: ${count};
+  };
+
+  // 8. Background Color Switcher (Halkan/Guyyaa)
+  function toggleMode() {
+    document.body.style.backgroundColor = (count % 2 === 0) ? "#f4f4f9" : "#e0e0e0";
+  }
+
+  // 9. Linkii Profile kallaattiin banuu (Function)
+  function openGitHub() {
+    window.open(profileLink, "_blank");
+  }
+
+  // 10. Barreeffama Footer irratti "Year" ofiin jijjiiru
+  const year = new Date().getFullYear();
+  console.log("Copyright © " + year + " " + username);
+</script>
 </body>
 </html>
