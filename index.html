@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+c<!DOCTYPE html>
 <html lang="om">
 <head>
     <meta charset="UTF-8">
@@ -41,11 +41,54 @@
 
     <a href="mailto:example@gmail.com" class="contact-btn">Na Quunnami</a>
 </div>
+    <nav class="main-nav">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">Waa'ee Koo</button>
+    <button onclick="showPage('skills')">Gabatee Dandeettii</button>
+    <button onclick="showPage('tool')">JS Tool</button>
+    <button onclick="showPage('contact')">Na Quunnamaa</button>
+</nav>
+    <div id="skills" class="page-content" style="display:none;">
+    <h2>Dandeettiiwwan Koo</h2>
+    <table border="1">
+        <tr><th>Teknooloojii</th><th>Sadarkaa</th></tr>
+        <tr><td>HTML5</td><td>Gaarii</td></tr>
+        <tr><td>JavaScript</td><td>Eegalaa</td></tr>
+    </table>
+</div>
 
-<footer>
+<div id="tool" class="page-content" style="display:none;">
+    <h2>Input & Output Tool</h2>
+    <input type="text" id="visitorName" placeholder="Maqaa kee galchi...">
+    <button onclick="processInput()">Check Result</button>
+    <p id="outputArea"></p>
+</div>
+    <footer>
     <p>&copy; 2024 Abraham Takale | Made with ❤️ on GitHub</p>
 </footer>
     <script>
+        // 1. Fuula jijjiiruuf (Navigation)
+function showPage(pageId) {
+    let pages = document.querySelectorAll('.page-content');
+    pages.forEach(p => p.style.display = 'none'); // Hunda dhoksi
+    document.getElementById(pageId).style.display = 'block'; // Isa filatame agarsiisi
+}
+        // 2. Input fi Output (Calculation/Greeting)
+function processInput() {
+    let name = document.getElementById('visitorName').value;
+    let age = document.getElementById('visitorAge').value;
+    let out = document.getElementById('outputArea');
+
+    if(name === "" || age === "") {
+        alert("Maaloo maqaa fi umrii galchi!");
+        return;
+    }
+
+    let message = age >= 18 ? "Ati ga'eessa dha!" : "Ati dargaggeessa dammaqaa dha!";
+    out.innerHTML = <h3>Nagaa, ${name}!</h3><p>${message}</p>;
+    out.style.backgroundColor = "#e9f7ef";
+}
+        
   // 1. Username GitHub irraa fudhachuu
   const username = "abrahamtakale13-bit";
 
